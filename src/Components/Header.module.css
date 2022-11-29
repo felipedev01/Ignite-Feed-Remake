@@ -1,6 +1,7 @@
 .header{
-    background:black;
-    height:120px;
-    color:white;
+    background: var(--gray-800);
+    display: flex;
+    justify-content: center;
+    padding:1.25rem 0;
 
 }
