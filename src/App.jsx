@@ -3,6 +3,7 @@ import { Header } from './Components/Header'
 import { Post } from './Components/Post'
 import './global.css'
 import styles from '../src/App.module.css'
+import { SideBar } from './Components/SideBar'
 
 export function App() {
   
@@ -13,9 +14,7 @@ export function App() {
 
     <div className={styles.Wrapper}>
       
-        <aside>
-          Sidebar
-        </aside>
+        <SideBar/>
         <main>
         <Post author="Felipe" 
         content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil omnis odit placeat sequi alias quia consequatur natus deserunt. Accusamus et magnam illo recusandae reprehenderit illum suscipit ut libero ea fugiat.
