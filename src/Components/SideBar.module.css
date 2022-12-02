@@ -15,7 +15,19 @@
     display:flex;
     flex-direction: column;
     align-items: center;
-}.SideBar footer{
+    margin-top:-2rem;
+}
+.Avatar{
+    height:3.75rem;
+    width:3.75rem;
+    border-radius:8px;
+    background: black;
+    border: 1px solid var(--gray-800);
+    outline: 2px solid var(--green-500);
+}
+
+
+.SideBar footer{
     border-top:1px solid var(--gray-600);
     margin-top: 1.5rem;
     padding: 1.5rem 2rem 2rem;
