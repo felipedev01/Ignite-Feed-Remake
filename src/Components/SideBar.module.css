@@ -39,6 +39,7 @@
     border: 1px solid var(--green-500);
     border-radius:8px;
     height:50px;
+    width:12rem;
     padding: 0 1.5rem;
     font-weight:bold;
     display:block;
@@ -46,6 +47,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    gap:0.4rem;
 
 
 }.profile strong{
@@ -54,4 +56,10 @@
     color:var(--gray-100);
     margin-top: 1rem;
     line-height:1.6;
+}.profile span{
+    color:var(--gray-400);
+    font-weight:400;
+    font-size:0.875rem;
+    line-height:1.6;
+    height:1.375;
 }
