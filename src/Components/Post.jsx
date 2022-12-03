@@ -5,7 +5,7 @@ export function Post(){
 
     return(
 
-        <article>
+        <article className={styles.Post}>
             <header>
                 <div className={styles.Author}>
                 <img className={styles.Avatar}src="https://avatars.githubusercontent.com/u/81122606?v=4" />
@@ -20,11 +20,15 @@ export function Post(){
             <div className={styles.Content}>
             <p>Fala galeraa 👋 </p>
 
-            <p>Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da </p>
+            <p>Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da 
 
-            <p>Rocketseat. O nome do projeto é DoctorCare 🚀</p>
+            Rocketseat. O nome do projeto é DoctorCare 🚀</p>
              <p>👉 <a href="">ane.design/doctorcare</a></p>
-              <p> <a href="">#novoprojeto #nlw #rocketseat</a></p>
+              <p> 
+                <a href="">#novoprojeto </a>
+                <a href="">#nlw </a> 
+                <a href="">#rocketseat </a>
+                </p>
 
             </div>
         </article>
