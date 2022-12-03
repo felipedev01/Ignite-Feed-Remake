@@ -1,16 +1,23 @@
+import styles from '../Components/Post.module.css'
+export function Post(){
 
-export function Post(props){
-
-    console.log(props)
+   
 
     return(
-        <div>
 
-         <strong>{props.author}</strong>
-         <p>
-            {props.content}
-         </p>
+        <article>
+            <header>
+                <div className={styles.Author}>
+                <img className={styles.Avatar}src="https://avatars.githubusercontent.com/u/81122606?v=4" />
+                <div className={styles.AuthorInfo}>
+                    <strong>Felipe</strong>
+                    <span>Web Developer</span>
+                </div>
 
-        </div>
+                </div>
+
+            </header>
+        </article>
+        
     )
 }
