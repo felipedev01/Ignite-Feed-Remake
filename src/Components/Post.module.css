@@ -13,4 +13,7 @@
 .AuthorInfo{
     display: flex;
     flex-direction: column;
+}.Content{
+    margin-top:1.5rem;
+    margin-bottom:3rem;
 }

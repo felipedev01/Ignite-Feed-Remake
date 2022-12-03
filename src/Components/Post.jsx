@@ -17,10 +17,14 @@ export function Post(){
                 </div>
               <time>Publicado há 1 hora</time>
             </header>
-            <div>
+            <div className={styles.Content}>
             <p>Fala galeraa 👋 </p>
+
             <p>Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da </p>
-            <p>Rocketseat. O nome do projeto é DoctorCare 🚀 👉 jane.design/doctorcare #novoprojeto #nlw #rocketseat </p>
+
+            <p>Rocketseat. O nome do projeto é DoctorCare 🚀</p>
+             <p>👉 <a href="">ane.design/doctorcare</a></p>
+              <p> <a href="">#novoprojeto #nlw #rocketseat</a></p>
 
             </div>
         </article>
