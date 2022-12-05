@@ -84,7 +84,7 @@
     line-height: 1.6;
     color:var(--gray-100);
 
-}.contentForm > button{
+}.contentForm  button{
     width: 6.75rem;
     height: 3rem;
     margin-top:1rem;
@@ -98,9 +98,17 @@
     line-height: 1.2rem;
     font-style: normal;
     color: #FFFFFF;
+    cursor:pointer;
     
 
 }.contentForm > button:Hover{
     background:var(--green-300);
     transition:background-color 0.2s;
+}.contentForm > footer{
+    visibility:hidden;
+    height:0;
+}.contentForm:focus-within footer{
+    visibility:visible;
+    height: 3rem;
+   
 }
