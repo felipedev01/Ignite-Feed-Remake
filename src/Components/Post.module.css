@@ -101,7 +101,7 @@
     cursor:pointer;
     
 
-}.contentForm > button:Hover{
+}.contentForm  button:Hover{
     background:var(--green-300);
     transition:background-color 0.2s;
 }.contentForm > footer{
@@ -110,5 +110,6 @@
 }.contentForm:focus-within footer{
     visibility:visible;
     height: 3rem;
+
    
 }
