@@ -17,11 +17,13 @@ width:100%;
     background:var(--gray-700);
     border-radius:9px;
     padding: 1rem 1rem 1.56rem 1rem;
+    margin-bottom: 1.125rem;
 
     
 }.commentContent > header{
     display: flex;
     justify-content: space-between;
+    margin-bottom: 1rem;
     
 }.authorInfo{
     display: flex;

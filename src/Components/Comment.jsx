@@ -1,6 +1,6 @@
 import styles from '../Components/Comment.module.css'
 import {Trash} from 'phosphor-react'
-
+import {ThumbsUp} from 'phosphor-react'
 export function Comment(){
     return(
         
@@ -13,11 +13,12 @@ export function Comment(){
                     <strong>Felipe</strong>
                     <span>Web Developer</span>
                     </div>
-                    <Trash size={24} className={styles.trash}/>
+                    <Trash size={20} className={styles.trash}/>
                     </header>
                     <p>Muito bom Devon, parabéns!! 👏👏</p>
                   
-                </div>
+                </div>  
+                <ThumbsUp size={32} />
                 <footer>Aplaudir</footer>
             </div>
         
