@@ -8,9 +8,14 @@
     outline: 2px solid var(--green-500);
 }.comment{
    display:flex;
+   gap: 1rem;
+   padding: 0 2.5rem;
+   background:var(--gray-800);
 }.commentBox{
 width:100%;
 }.commentContent{
+    background:var(--gray-700);
+    border-radius:9px;
 
     
 }.commentContent > header{
