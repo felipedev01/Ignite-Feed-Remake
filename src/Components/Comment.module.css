@@ -16,6 +16,7 @@ width:100%;
 }.commentContent{
     background:var(--gray-700);
     border-radius:9px;
+    padding: 1rem 1rem 1.56rem 1rem;
 
     
 }.commentContent > header{
@@ -25,4 +26,6 @@ width:100%;
 }.authorInfo{
     display: flex;
     flex-direction: column;
+}.trash{
+    color:var(--gray-400);
 }
