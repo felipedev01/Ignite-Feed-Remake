@@ -23,7 +23,24 @@ width:100%;
     justify-content: space-between;
     margin-bottom: 1rem;
     
-}.authorInfo{
+}.commentContent time{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size:0.75rem;
+    line-height: 1.6;
+    color:var(--gray-400);
+}.commentContent > header strong{
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    font-style: normal;
+    color:var(--gray-100);
+
+}
+
+.authorInfo{
     display: flex;
     flex-direction: column;
 }.deleteButton{
@@ -33,6 +50,9 @@ width:100%;
     cursor: pointer;
     border-radius: 4px;
     color: var(--gray-400);
-    height: 20px;
+    height: 1.5rem;
 
+}.deleteButton :Hover{
+    color: var(--red-200);
+    transition:0.2s;
 }
