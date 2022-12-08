@@ -25,8 +25,8 @@ export function Comment(){
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
                 
                 <footer>
-                    <button >
-                    <ThumbsUp size={32} />
+                    <button className={styles.likeButton}>
+                    <ThumbsUp size={20} />
                     Aplaudir
                     <span>20</span>
                     </button>
