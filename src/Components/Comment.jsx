@@ -13,13 +13,24 @@ export function Comment(){
                     <strong>Felipe</strong>
                     <span>Web Developer</span>
                     </div>
+
+                    <button title="Deletar Comentário" className={styles.deleteButton}>
                     <Trash size={20} className={styles.trash}/>
+                    </button>
+                    
                     </header>
                     <p>Muito bom Devon, parabéns!! 👏👏</p>
                   
-                </div>  
-                <ThumbsUp size={32} />
-                <footer>Aplaudir</footer>
+                </div> 
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+                
+                <footer>
+                    <button >
+                    <ThumbsUp size={32} />
+                    Aplaudir
+                    <span>20</span>
+                    </button>
+                </footer>
             </div>
         
         </div>

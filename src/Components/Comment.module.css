@@ -1,11 +1,9 @@
 
 .Avatar{
-    height: calc(3rem + 12px);
-    width: calc(3rem + 12px);
+    height: 3rem;
+    width: 3rem;
     border-radius:8px;
     background: black;
-    border: 4px solid var(--gray-800);
-    outline: 2px solid var(--green-500);
 }.comment{
    display:flex;
    gap: 1rem;
@@ -28,6 +26,13 @@ width:100%;
 }.authorInfo{
     display: flex;
     flex-direction: column;
-}.trash{
-    color:var(--gray-400);
+}.deleteButton{
+    background: transparent;
+    font-size: -5px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    color: var(--gray-400);
+    height: 20px;
+
 }
