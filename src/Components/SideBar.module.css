@@ -32,6 +32,8 @@
     border-top:1px solid var(--gray-600);
     margin-top: 1.5rem;
     padding: 1.5rem 2rem 2rem;
+    display: flex;
+    justify-content: center;
     
 }.SideBar footer :hover{
     background:var(--green-500);
@@ -49,7 +51,7 @@
     border-radius:8px;
     height:50px;
     width:12rem;
-    padding: 0 1.5rem;
+    padding: 0 1.4rem;
     font-weight:bold;
     display:block;
     text-decoration:none;
