@@ -1,11 +1,4 @@
-.Avatar{
-    height: calc(3rem + 12px);
-    width: calc(3rem + 12px);
-    border-radius:8px;
-    background: black;
-    border: 4px solid var(--gray-800);
-    outline: 2px solid var(--green-500);
-}.Author{
+.Author{
     display:flex;
     gap:1rem;
 
