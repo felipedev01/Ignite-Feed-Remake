@@ -2,6 +2,7 @@ import styles from '../Components/Post.module.css'
 import {Avatar} from '../Components/Avatar'
 export function Post(){
 
+
    
 
     return(

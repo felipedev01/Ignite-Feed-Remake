@@ -7,6 +7,36 @@ import styles from '../src/App.module.css'
 import { SideBar } from './Components/SideBar'
 
 export function App() {
+
+
+  const post=[
+    {
+      id:1,
+      author:{
+        authorAvatar:"https://avatars.githubusercontent.com/u/81122606?v=4",
+        authorName:"Felipe",
+        authorRole:"Web Developer",
+      },
+      publishedAt:new Date('2022-12-11 12:00:00'),
+      content:[{
+          type:"paragraph",
+          content:"Fala galeraa 👋 ",
+
+      },
+       {
+        type:"paragraph",
+        content:"Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da Rocketseat. O nome do projeto é DoctorCare 🚀",
+
+       },
+       {
+        type:"link",
+        content:"ane.design/doctorcare",
+       }
+    
+    ]
+
+    },
+  ]
   
 
   return (
