@@ -1,10 +1,11 @@
 import styles from '../Components/Post.module.css'
 import {Avatar} from '../Components/Avatar'
 import {Comment} from '../Components/Comment'
-export function Post(props){
+
+export function Post({author,content,publishedAt}){
 
 
-    console.log(props)
+    console.log(author)
    
 
     return(
@@ -12,20 +13,20 @@ export function Post(props){
         <article className={styles.Post}>
             <header>
                 <div className={styles.Author}>
-                <Avatar  src={props.author.authorAvatar} />
+                <Avatar  src={author.authorAvatar} />
                 <div className={styles.AuthorInfo}>
-                    <strong>{props.author.authorName}</strong>
-                    <span>{props.author.authorRole}</span>
+                    <strong>{author.authorName}</strong>
+                    <span>{author.authorRole}</span>
                 </div>
 
                 </div>
-              <time title="12 de dezembro de 2022 às 12 h"dateTime={props.publishedAt}>Publicado há 1 hora</time>
+              <time title="12 de dezembro de 2022 às 12 h"dateTime={publishedAt}>Publicado há 1 hora</time>
             </header>
             <div className={styles.Content}>
-            <p> {props.content[0].content} </p>
+            <p> {content[0].content} </p>
 
-            <p>{props.content[1].content}</p>
-             <p>👉 <a href="">{props.content[2].content}</a></p>
+            <p>{content[1].content}</p>
+             <p>👉 <a href="">{content[2].content}</a></p>
               <p> 
                 <a href="">#novoprojeto </a>
                 <a href="">#nlw </a> 
