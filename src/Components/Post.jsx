@@ -1,5 +1,6 @@
 import styles from '../Components/Post.module.css'
 import {Avatar} from '../Components/Avatar'
+import {Comment} from '../Components/Comment'
 export function Post(props){
 
 
@@ -44,8 +45,11 @@ export function Post(props){
                  </footer>
               
              </form>
-            
+             <div className={styles.commentList}>
+                <Comment/>
+             </div>
         </article>
+        
         
     )
 }
