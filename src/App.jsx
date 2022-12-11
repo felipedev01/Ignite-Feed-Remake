@@ -13,14 +13,14 @@ export function App() {
     {
       id:1,
       author:{
-        authorAvatar:"https://avatars.githubusercontent.com/u/81122606?v=4",
-        authorName:"Felipe",
-        authorRole:"Web Developer",
+        authorAvatar:"https://avatars.githubusercontent.com/u/11328606?v=254",
+        authorName:"Angry Bird",
+        authorRole:"Bird",
       },
       publishedAt:new Date('2022-12-11 12:00:00'),
       content:[{
           type:"paragraph",
-          content:"Fala galeraa 👋 ",
+          content:"Fala galeraa testando 👋 ",
 
       },
        {
@@ -35,7 +35,7 @@ export function App() {
     
     ]
 
-    },
+    }
   ]
   
 
@@ -47,21 +47,16 @@ export function App() {
       
         <SideBar/>
         <main>
-        <Post author="Felipe" 
-        content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil omnis odit placeat sequi alias quia consequatur natus deserunt. Accusamus et magnam illo recusandae reprehenderit illum suscipit ut libero ea fugiat.
-        "/>
-        <Comment></Comment>
-        <Post author="Felipe" 
-        content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil omnis odit placeat sequi alias quia consequatur natus deserunt. Accusamus et magnam illo recusandae reprehenderit illum suscipit ut libero ea fugiat.
-      "/>
-      <Post author="Felipe" 
-        content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil omnis odit placeat sequi alias quia consequatur natus deserunt. Accusamus et magnam illo recusandae reprehenderit illum suscipit ut libero ea fugiat.
-      "/>
-
-         <Post author="Felipe" 
-        content="Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil omnis odit placeat sequi alias quia consequatur natus deserunt. Accusamus et magnam illo recusandae reprehenderit illum suscipit ut libero ea fugiat.
-        "/>
-
+        {post.map(posts=>{
+          return(
+            <Post 
+            author={posts.author}
+            content={posts.content}
+            publishedAt={posts.publishedAt}
+            
+            />
+          )
+        })}
         </main>
        
     </div>

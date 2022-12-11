@@ -1,8 +1,9 @@
 import styles from '../Components/Post.module.css'
 import {Avatar} from '../Components/Avatar'
-export function Post(){
+export function Post(props){
 
 
+    console.log(props)
    
 
     return(
@@ -10,22 +11,20 @@ export function Post(){
         <article className={styles.Post}>
             <header>
                 <div className={styles.Author}>
-                <Avatar  src="https://avatars.githubusercontent.com/u/81122606?v=4" />
+                <Avatar  src={props.author.authorAvatar} />
                 <div className={styles.AuthorInfo}>
-                    <strong>Felipe</strong>
-                    <span>Web Developer</span>
+                    <strong>{props.author.authorName}</strong>
+                    <span>{props.author.authorRole}</span>
                 </div>
 
                 </div>
-              <time>Publicado há 1 hora</time>
+              <time title="12 de dezembro de 2022 às 12 h"dateTime={props.publishedAt}>Publicado há 1 hora</time>
             </header>
             <div className={styles.Content}>
-            <p> Fala galeraa 👋 </p>
+            <p> {props.content[0].content} </p>
 
-            <p>Acabei de subir mais um projeto no meu portifa. É um projeto que fiz no NLW Return, evento da 
-
-            Rocketseat. O nome do projeto é DoctorCare 🚀</p>
-             <p>👉 <a href="">ane.design/doctorcare</a></p>
+            <p>{props.content[1].content}</p>
+             <p>👉 <a href="">{props.content[2].content}</a></p>
               <p> 
                 <a href="">#novoprojeto </a>
                 <a href="">#nlw </a> 
