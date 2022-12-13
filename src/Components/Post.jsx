@@ -23,10 +23,19 @@ export function Post({author,content,publishedAt}){
               <time title="12 de dezembro de 2022 às 12 h"dateTime={publishedAt}>Publicado há 1 hora</time>
             </header>
             <div className={styles.Content}>
-            <p> {content[0].content} </p>
-
-            <p>{content[1].content}</p>
-             <p>👉 <a href="">{content[2].content}</a></p>
+                {content.map(line=>{
+                    if(line.type=="paragraph"){
+                        return(
+                            <p>{line.content}</p>
+                        )
+                    }else{
+                        return(
+                            <p><a href="#">{line.content}</a></p> 
+                        )
+                       
+                    }
+                })}
+            
               <p> 
                 <a href="">#novoprojeto </a>
                 <a href="">#nlw </a> 
