@@ -1,10 +1,20 @@
+import {format, formatDistance, formatDistanceToNow} from 'date-fns'
+import ptBR from 'date-fns/locale/pt-BR'
+
 import styles from '../Components/Post.module.css'
 import {Avatar} from '../Components/Avatar'
 import {Comment} from '../Components/Comment'
 
 export function Post({author,content,publishedAt}){
 
+    const publishedDateFormatted= format(publishedAt,"d 'de' MMMM 'de' y 'às' H mm ss 'h'",{
+        locale:ptBR,
+    })
 
+    const publishedDateRelativeToNow=formatDistanceToNow(publishedAt,{
+        locale:ptBR,
+        addSuffix:true,
+    })
     console.log(author)
    
 
@@ -20,7 +30,7 @@ export function Post({author,content,publishedAt}){
                 </div>
 
                 </div>
-              <time title="12 de dezembro de 2022 às 12 h"dateTime={publishedAt}>Publicado há 1 hora</time>
+              <time title={publishedDateFormatted} dateTime={publishedAt.toISOString()}>{publishedDateRelativeToNow}</time>
             </header>
             <div className={styles.Content}>
                 {content.map(line=>{
