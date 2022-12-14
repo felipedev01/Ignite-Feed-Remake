@@ -7,6 +7,9 @@ import {Comment} from '../Components/Comment'
 
 export function Post({author,content,publishedAt}){
 
+
+    const comentList= [1,2,3]
+
     const publishedDateFormatted= format(publishedAt,"d 'de' MMMM 'de' y 'às' H mm ss 'h'",{
         locale:ptBR,
     })
@@ -66,7 +69,14 @@ export function Post({author,content,publishedAt}){
               
              </form>
              <div className={styles.commentList}>
-                <Comment/>
+                {
+                    comentList.map(line=>{
+                        return(
+                            <Comment/>
+                        )
+                    })
+                }
+                
              </div>
         </article>
         
