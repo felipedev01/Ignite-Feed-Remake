@@ -9,9 +9,7 @@ import { useState } from 'react'
 export function Post({author,content,publishedAt}){
 
     const [commentList,setCommenList]=useState([
-        1,
-        2,
-        3
+        'Post muito bacana!'
     ])
 
     function handleCreateNewComment(){
@@ -81,7 +79,7 @@ export function Post({author,content,publishedAt}){
                 {
                     commentList.map(line=>{
                         return(
-                            <Comment/>
+                            <Comment content={commentList}/>
                         )
                     })
                 }
