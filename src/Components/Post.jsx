@@ -9,12 +9,22 @@ import { useState } from 'react'
 export function Post({author,content,publishedAt}){
 
     const [commentList,setCommenList]=useState([
-        'Post muito bacana!'
+        'Post muito bacana!',
+    ])
+
+    const [newCommentText, setNewCommentText]=useState([
+
     ])
 
     function handleCreateNewComment(){
         event.preventDefault()
-        setCommenList([1,2,3,4])
+        setCommenList([...commentList,newCommentText])
+        setNewCommentText('')
+
+    }
+    function handleCommentTextChange(){
+        setNewCommentText(event.target.value)
+        console.log(newCommentText)
     }
 
     const publishedDateFormatted= format(publishedAt,"d 'de' MMMM 'de' y 'às' H mm ss 'h'",{
@@ -69,6 +79,9 @@ export function Post({author,content,publishedAt}){
                 <strong>Deixe seu Feedback</strong>
                 <textarea
                 placeholder="Deixe seu comentário"
+                name="content"
+                onChange={handleCommentTextChange}
+                value={newCommentText}
                  />
                  <footer>
                  <button type="submit"> Publicar</button>
@@ -77,9 +90,10 @@ export function Post({author,content,publishedAt}){
              </form>
              <div className={styles.commentList}>
                 {
-                    commentList.map(line=>{
+                    commentList.map(comment =>{
                         return(
-                            <Comment content={commentList}/>
+                            <Comment content={comment}/>
+                            
                         )
                     })
                 }

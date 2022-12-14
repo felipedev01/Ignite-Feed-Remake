@@ -4,6 +4,7 @@ import {ThumbsUp} from 'phosphor-react'
 import {Avatar} from './Avatar'
 export function Comment({content}){
 
+    console.log(content)
     return(
         
         <div className={styles.comment}>
