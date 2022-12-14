@@ -4,11 +4,20 @@ import ptBR from 'date-fns/locale/pt-BR'
 import styles from '../Components/Post.module.css'
 import {Avatar} from '../Components/Avatar'
 import {Comment} from '../Components/Comment'
+import { useState } from 'react'
 
 export function Post({author,content,publishedAt}){
 
+    const [commentList,setCommenList]=useState([
+        1,
+        2,
+        3
+    ])
 
-    const comentList= [1,2,3]
+    function handleCreateNewComment(){
+        event.preventDefault()
+        setCommenList([1,2,3,4])
+    }
 
     const publishedDateFormatted= format(publishedAt,"d 'de' MMMM 'de' y 'às' H mm ss 'h'",{
         locale:ptBR,
@@ -57,7 +66,7 @@ export function Post({author,content,publishedAt}){
                 
             </div>
              
-             <form action="" className={styles.contentForm}>
+             <form action="" className={styles.contentForm} onSubmit={handleCreateNewComment}>
 
                 <strong>Deixe seu Feedback</strong>
                 <textarea
@@ -70,7 +79,7 @@ export function Post({author,content,publishedAt}){
              </form>
              <div className={styles.commentList}>
                 {
-                    comentList.map(line=>{
+                    commentList.map(line=>{
                         return(
                             <Comment/>
                         )
