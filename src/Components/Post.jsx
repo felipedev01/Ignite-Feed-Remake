@@ -27,8 +27,15 @@ export function Post({author,content,publishedAt}){
         setNewCommentText(event.target.value)
         console.log(newCommentText)
     }
-    function deleteComment(comment){
-        console.log(`Deletar Comentário ${comment}`)
+    function deleteComment(commentToDelete){
+        const commentsWithoutTheDeleteOne= commentList.filter(comment =>{
+            return(
+                comment != commentToDelete
+            ) 
+        })
+
+
+        setCommenList(commentsWithoutTheDeleteOne)
     
     }
     const publishedDateFormatted= format(publishedAt,"d 'de' MMMM 'de' y 'às' H mm ss 'h'",{
