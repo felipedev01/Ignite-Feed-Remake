@@ -38,6 +38,10 @@ export function Post({author,content,publishedAt}){
         setCommenList(commentsWithoutTheDeleteOne)
     
     }
+    function handleNewCommentInvalid(){
+        event.target.setCustomValidity('Preencha este campo')
+     
+    }
     const publishedDateFormatted= format(publishedAt,"d 'de' MMMM 'de' y 'às' H mm ss 'h'",{
         locale:ptBR,
     })
@@ -93,6 +97,8 @@ export function Post({author,content,publishedAt}){
                 name="content"
                 onChange={handleCommentTextChange}
                 value={newCommentText}
+                onInvalid={handleNewCommentInvalid}
+                required
                  />
                  <footer>
                  <button type="submit"> Publicar</button>
