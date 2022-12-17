@@ -24,6 +24,7 @@ export function Post({author,content,publishedAt}){
 
     }
     function handleCommentTextChange(){
+        event.target.setCustomValidity('')
         setNewCommentText(event.target.value)
         console.log(newCommentText)
     }
@@ -39,6 +40,7 @@ export function Post({author,content,publishedAt}){
     
     }
     function handleNewCommentInvalid(){
+        
         event.target.setCustomValidity('Preencha este campo')
      
     }
@@ -52,6 +54,7 @@ export function Post({author,content,publishedAt}){
     })
     console.log(author)
    
+    const isNewCommentEmpty=newCommentText.length==0
 
     return(
 
@@ -101,7 +104,7 @@ export function Post({author,content,publishedAt}){
                 required
                  />
                  <footer>
-                 <button type="submit"> Publicar</button>
+                 <button type="submit" disabled={isNewCommentEmpty}> Publicar</button>
                  </footer>
               
              </form>
